@@ -1,0 +1,64 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#homepage .container{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+#homepage {
+    overflow-x:hidden;
+}
+
+.bgsplash {
+  background: url(homebg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100vw;
+  height: 70vh;
+  margin-top: -20px;
+}
+
+.bgsplash > .title {
+    text-align: center;
+    padding-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #eee;
+}
+
+
+.bgsplash > .moreinfo {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: #222;
+    font-size: 4em;
+    padding-top: 5%;
+}
+
+.bgsplash > .registerbutton {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+}
+
+.details { 
+    padding-left: 10% !important;
+    padding-right: 8% !important;
+    margin-top: 20px;
+    z-index: 2;
+}
+
+.entries { 
+    padding-top: 20px;
+    z-index: 2;
+    background-color: #ddd;
+    width: 100vw;
+}

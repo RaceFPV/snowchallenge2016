@@ -1,0 +1,29 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+//this should be moved to a proper css.scss file instead of being dumped at the bottom of application.css
+//it MUST override bootstraps default css stuff
+
+//pretty google font noto serif -- IMPORT ME DIRECTLY IF GOING TO PROD
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,100,300,500,700,900);
+
+body {
+  font-family: 'Roboto', sans-serif;
+}

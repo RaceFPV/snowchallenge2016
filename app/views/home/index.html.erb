@@ -2,6 +2,13 @@
 <div class="bgsplash">
     <h1 class="title">Fly during the 1/23/2016 blizzard and win cash!</h1>
     <h1 class="moreinfo"><i class="fa fa-angle-double-down fa-6"></i></h1>
+    <div align="center">
+        <% if user_signed_in? %>
+            <%= button_to "Add/Edit Your Entry", entry_path, method: 'get', class: 'btn btn-primary btn-lg' %>
+        <% else %>
+            <%= button_to "Register now!", new_user_registration_path, method: 'get', class: 'btn btn-primary btn-lg' %>
+        <% end %>
+    </div>
 </div>
 <div class="details">
     <div class="row">
@@ -41,7 +48,7 @@
                 </div>
                 <div class="panel-body">
                     <ul>
-                        <li><p>Must fly a drone or multicoptor</p></li>
+                        <li><p>Must fly a drone, multicoptor, or rc craft</p></li>
                         <li><p>Video must be recorded on 1/23/16 (Saturday)</p></li>
                         <li><p>Must be during snowfall</p></li>
                         <li><p>Must be outside</p></li>
@@ -56,23 +63,25 @@
 <hr/>
 <div class="entries">
     <div class="row">
-        <div class="col-sm-3">
-            <div class="panel panel-primary" style="margin-left: 10px;">
-                <div class="panel-heading">
-                    <h2>Entered</h2>
-                </div>
-                <div class="panel-body">
-                    <h2>Coming soon!</h2>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-9">
+        <div class="col-sm-8 col-sm-offset-2">
             <div class="panel panel-primary" style="margin-right: 25px;">
                 <div class="panel-heading">
-                    <h2>Entries</h2>
+                    <h2>Challenge Entries</h2>
                 </div>
-                <div class="panel-body">
-                    <h2>Coming soon!</h2>
+                <div class="panel-body" style="min-height: 200px;">
+                    <% if !@entries.first.nil? %>
+                            <ul>
+                            <% @entries.each do |x, y| %>
+                                <% if y.nil? %>
+                                    <li><b style="font-size: 1.2em"><%= x %></b> registered but did not enter.</li>
+                                <% else %>
+                                    <li><a href="<%= y %>"><%= y %></a> submitted by <b style="font-size: 1.2em"><%= x %></b>.</li>
+                                <% end %>
+                            <% end %>
+                        </uL>
+                    <% else %>
+                        <h2>Be the first!</h2>
+                    <% end %>
                 </div>
             </div>
         </div>

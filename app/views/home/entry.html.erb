@@ -1,0 +1,45 @@
+<style>
+#entrylink {
+    border-bottom: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: #337AB7;
+    padding-bottom: -3px;
+    color: #337AB7 !important;
+}
+</style>
+<div class="row">
+    <h1 align="center">Add or edit your challenge entry</h1>
+    <br/>
+    <div align="center" class="col-sm-8 col-sm-offset-1">
+        <%= form_for :entry, html: {class: "form-horizontal row"} do |f| %>
+            <%= f.label :entry, class: 'control-label col-sm-2' %>
+            <div class="col-sm-10">
+                <div class="input-group">
+                    <%= f.text_field :entry, autofocus: true, class: 'form-control focus', style: "min-width: 50vw", placeholder: "http://youtube.com/wowsoamazing", value: current_user.entry %>
+                    <span class="input-group-btn">
+                        <%= f.submit "Save", class: 'btn btn-primary'%>
+                    </span>
+                </div>
+            </div>
+        <% end %>
+    <br/>
+    <br/>
+    </div>
+    <br/>
+</div>
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+        <div class="well">
+            <h3 align="center" style="margin-top: -7px;">Please remember the rules</h3>
+            <hr/>
+            <ul>
+                <li><p>Must fly a drone, multicoptor, or rc craft</p></li>
+                <li><p>Video must be recorded on 1/23/16 (Saturday)</p></li>
+                <li><p>Must be during snowfall</p></li>
+                <li><p>Must be outside</p></li>
+                <li><p>Does not have to be FPV (LoS, gopro, phone accepted)</p></li>
+                <li><p>Must be submitted by midnight Sunday</p></li>
+            </ul>
+        </div>
+    </div>
+</div>

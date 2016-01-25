@@ -1,13 +1,15 @@
 <% @body_id = "homepage" %>
 <div class="bgsplash">
+    <div class="alert alert-info" role="alert" style="margin-top:10px;">
+        <h3 align="center">
+        Thank you to all who entered and 
+        <a href="https://www.youtube.com/watch?v=cR90sc4HHzk" class="alert-link">congratulations to our winner, RCFlo!</a>
+        </h3>
+    </div>
     <h1 class="title">Fly during the 1/23/2016 blizzard and win cash!</h1>
     <h1 class="moreinfo"><i class="fa fa-angle-double-down fa-6"></i></h1>
     <div align="center">
-        <% if user_signed_in? %>
-            <%= button_to "Add/Edit Your Entry", entry_path, method: 'get', class: 'btn btn-primary btn-lg' %>
-        <% else %>
-            <%= button_to "Register now!", new_user_registration_path, method: 'get', class: 'btn btn-primary btn-lg' %>
-        <% end %>
+        <h2>Challenge ended. See you next blizzard!</h2>
     </div>
 </div>
     <div class="row details">
@@ -17,7 +19,7 @@
                     <h2>Entry</h2>
                 </div>
                 <div class="panel-body">
-                    <h4> Register by signing up <%= link_to "Here", new_user_registration_path %></h4>
+                    <h4> Register by signing up </h4>
                     <h4> Once registered, submit your video link and win!</h4>
                     <small> Entries will be accepted until midnight on Sunday the 24th</small>
                 </div>

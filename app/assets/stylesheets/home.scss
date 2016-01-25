@@ -62,3 +62,17 @@
     background-color: #ddd;
     width: 100vw;
 }
+
+.s3logo {
+  position: absolute;
+  background: url(s3.png) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100vw;
+  top: 60vh;
+  margin-top: 20px;
+  margin-bottom: -10vh;
+  height: 110px;
+}
